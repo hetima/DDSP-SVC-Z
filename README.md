@@ -9,7 +9,7 @@ pip install inquirerpy
 ```
 
 ## z_main_diff.py
-main_diff.pyを簡略化したコマンドです。DDSP-SVCのフォルダ内に配置してください。引数なしで実行します。
+main_diff.pyを簡略化したコマンドです。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
 
 ```
 python z_main_diff.py
