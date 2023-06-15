@@ -57,8 +57,8 @@ def models_in_project(project_path):
     return latest_checkpoint_path(ddsp_path), latest_checkpoint_path(diff_path)
 
 def do_main():
-    parser = argparse.ArgumentParser(description='DDSP-SVC-Z z_main_diff')
-    parser.add_argument('-o', '--output_dir', type=str, default="", help="output dir")
+    parser = argparse.ArgumentParser(description="DDSP-SVC-Z z_main_diff")
+    parser.add_argument("-o", "--output_dir", type=str, default="", help="output dir")
     args = parser.parse_args()
 
     #model
@@ -102,5 +102,6 @@ def do_main():
     print(output_path)
     exec_main_diff(ddsp_path, diff_path, input_path, output_path)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     do_main()
