@@ -57,7 +57,7 @@ def models_in_project(project_path):
     return latest_checkpoint_path(ddsp_path), latest_checkpoint_path(diff_path)
 
 def do_main():
-    parser = argparse.ArgumentParser(description='sovits4 inference')
+    parser = argparse.ArgumentParser(description='DDSP-SVC-Z z_main_diff')
     parser.add_argument('-o', '--output_dir', type=str, default="", help="output dir")
     args = parser.parse_args()
 
