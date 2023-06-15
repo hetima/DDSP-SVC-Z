@@ -6,7 +6,7 @@ import glob
 from InquirerPy import inquirer
 # from InquirerPy.validator import NumberValidator
 import subprocess
-# import argparse
+import argparse
 
 MODELS_PATH = "exp"
 DDSP_MODEL_DIR = "combsub"
@@ -57,8 +57,10 @@ def models_in_project(project_path):
     return latest_checkpoint_path(ddsp_path), latest_checkpoint_path(diff_path)
 
 def do_main():
-    print(sys.base_prefix)
-    print(PYTHON_PATH)
+    parser = argparse.ArgumentParser(description='sovits4 inference')
+    parser.add_argument('-o', '--output_dir', type=str, default="", help="output dir")
+    args = parser.parse_args()
+
     #model
     project = select_project()
     if project == "":
@@ -87,7 +89,11 @@ def do_main():
     #output file
     input_name = os.path.basename(input_path)
     output_name = project + "-" + input_name
-    output_path = os.path.join(os.path.dirname(input_path), output_name)
+    output_dir = os.path.dirname(input_path)
+    if args.output_dir:
+        output_dir = args.output_dir
+        os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, output_name)
     output_path = unique_ouput_path(output_path)
     if not output_path:
         print("output path confused")
