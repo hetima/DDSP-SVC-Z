@@ -8,6 +8,30 @@ InquirerPyが必要です。
 pip install inquirerpy
 ```
 
+## 4.0/z_init_project.py
+4.0用のコマンドです。複数モデルの並行使用ができるフォルダ構成を自動生成します。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
+
+```
+python z_init_project.py
+```
+
+モデル名を聞いてくるので入力するとconfigファイルやデータセットを入れるフォルダを自動作成します。
+
+- configs/モデル名/diffusion-new.yaml
+- datasets/モデル名/train/audio
+- datasets/モデル名/val/audio
+- exp/モデル名
+
+configは `configs/diffusion-new.yaml` を元に作成するのでフォルダパス以外の内容はそれに従います。
+
+プリトレインモデルをカレントフォルダに「model_0.pt」という名前で置いておくと `exp/モデル名/` 内に自動でコピーします。他の場所に置いている場合は引数で指定できます
+
+```
+python z_init_project.py --pretrained_model path/to/model.pt
+```
+
+
+
 
 ## 4.0/z_main_diff.py
 4.0用のmain_diff.pyを簡略化したコマンドです。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
