@@ -80,8 +80,8 @@ def do_main():
         print("file not found")
         exit(0)
     #output file
-    input_name = os.path.basename(input_path)
-    output_name = project + "-" + input_name
+    input_name = os.path.splitext(os.path.basename(input_path))[0]
+    output_name = input_name + "-" + project + ".wav"
     output_dir = os.path.dirname(input_path)
     if args.output_dir:
         output_dir = args.output_dir
