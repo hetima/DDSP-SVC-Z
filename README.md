@@ -1,15 +1,15 @@
 # DDSP-SVC-Z
 
-[DDSP-SVC](https://github.com/yxlllc/DDSP-SVC)を使いやすくするスクリプトです。venv環境下で使用することを想定しています。
+[DDSP-SVC](https://github.com/yxlllc/DDSP-SVC)を使いやすくするスクリプトです。
 
-InquirerPyが必要です。
+questionaryが必要です。
 
 ```
-pip install inquirerpy
+pip install questionary
 ```
 
-## 6.1/z_init_project.py
-6.1用のコマンドです。複数モデルの並行使用ができるフォルダ構成を自動生成します。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
+## 6.3/z_init_project.py
+6.3用のコマンドです。複数モデルの並行使用ができるフォルダ構成を自動生成します。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
 
 ```
 python z_init_project.py
@@ -42,8 +42,8 @@ python train_reflow.py -c configs/モデル名/reflow.yaml
 ```
 
 
-## 6.1/z_main_reflow.py
-6.1用のmain_reflow.pyを簡略化したコマンドです。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
+## 6.3/z_main_reflow.py
+6.3用のmain_reflow.pyを簡略化したコマンドです。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。
 
 ```
 python z_main_reflow.py
@@ -68,6 +68,12 @@ exp
   └model_xxxx.pt
 ```
 
+## 6.1/z_init_project.py 6.1/z_main_reflow.py
+6.3と同じです。使っているライブラリが異なります。InquirerPyが必要です。以下4.0用3.0用も同じくInquirerPyを使います。
+
+```
+pip install inquirerpy
+```
 
 ## 4.0/z_init_project.py
 4.0用のコマンドです。複数モデルの並行使用ができるフォルダ構成を自動生成します。DDSP-SVCのフォルダ内に配置してください（カレントディレクトリがDDSP-SVCであれば他の場所に置いても動きます）。引数なしで実行します。

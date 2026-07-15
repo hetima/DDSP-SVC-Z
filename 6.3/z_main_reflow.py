@@ -68,7 +68,7 @@ def do_main():
     print(diff_path)
 
     #input file
-    input_path = questionary.path("wav file path:").ask()
+    input_path = questionary.path("src audio file path:").ask()
     if not input_path:
         exit(0)
     if input_path[0] == '"' or input_path[0] == "'":
