@@ -11,7 +11,7 @@ import argparse
 MODELS_PATH = "exp"
 DDSP_MODEL_DIR = "combsub"
 DIFF_MODEL_DIR = "diff"
-PYTHON_PATH = os.path.join(os.environ["VIRTUAL_ENV"], "Scripts/python.exe")
+PYTHON_PATH = sys.executable
 
 def exec_main_diff(ddsp_model, diff_model, input_path, output_path):
     args = [PYTHON_PATH, "main_diff.py"]

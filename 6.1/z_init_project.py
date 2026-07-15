@@ -14,7 +14,7 @@ MODELS_PATH = "exp"
 DATASETS_PATH = "datasets"
 CONFIGS_PATH = "configs"
 CONFIG_NAME = "reflow.yaml"
-PYTHON_PATH = os.path.join(os.environ["VIRTUAL_ENV"], "Scripts/python.exe")
+PYTHON_PATH = sys.executable
 
 
 def init_project(project_name, pretrain_path):

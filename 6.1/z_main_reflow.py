@@ -10,7 +10,7 @@ import argparse
 
 MODELS_PATH = "exp"
 DIFF_MODEL_DIR = ""
-PYTHON_PATH = os.path.join(os.environ["VIRTUAL_ENV"], "Scripts/python.exe")
+PYTHON_PATH = sys.executable
 
 def exec_main_reflow(diff_model, input_path, output_path):
     args = [PYTHON_PATH, "main_reflow.py"]

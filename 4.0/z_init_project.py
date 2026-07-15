@@ -14,7 +14,7 @@ MODELS_PATH = "exp"
 DATASETS_PATH = "datasets"
 CONFIGS_PATH = "configs"
 CONFIG_NAME = "diffusion-new.yaml"
-PYTHON_PATH = os.path.join(os.environ["VIRTUAL_ENV"], "Scripts/python.exe")
+PYTHON_PATH = sys.executable
 
 def exec_main_diff(diff_model, input_path, output_path):
     args = [PYTHON_PATH, "main_diff.py"]
